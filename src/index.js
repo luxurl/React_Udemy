@@ -214,11 +214,58 @@ const nameArr = ["tomy", "May", "Jun"];
 // nameArr.map((name,index) => console.log(`${index +1}番目は${name}です`));
 
 //配列の値に条件付きで置換
-const newNameArry = nameArr.map((name) => {
-  if (name === "Jun") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArry);
+// const newNameArry = nameArr.map((name) => {
+//   if (name === "Jun") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArry);
+
+/**
+ * 三項演算子
+ *  */
+
+//ある条件？条件がtrueのとき：条件がtrueのとき
+//  const val1 = 1 > 0 ? 'true' : 'false';
+//  console.log(val1);
+
+// const num = "1300";
+//金額表示に変換してくれる
+// num.toLocaleString();
+// console.log(num.toLocaleString());
+
+// const formattedNum = typeof num === 'number' ? num.toLocaleString :'数値を入力してください'
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "over 100" : "許容範囲内です";
+// };
+
+// console.log(checkSum(50,60));
+
+/**
+ *
+ * 論理演算子の本当の意味を知る
+ * */
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2){
+//   console.log("1か2はtrueです")
+// }
+
+// if (flag1 && flag2){
+//   console.log("1か2はtrueです")
+// }
+
+//||は左側がfalseならば右側を返す
+// const num = null ;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// //&&は左側がtrueならば右側を返す
+// const num2 = 100;
+// const fee = num2 && "なにか設定されました";
+// console.log(fee);
