@@ -131,13 +131,94 @@ console.log(message4);
 // //引数が設定されないことを防止したい
 // sayHello();
 
-const sayHello = (name = "taro") => console.log(`Hello ${name}`);
-//引数が設定されないことを防止したい
-sayHello();
-sayHello("Mime");
+// const sayHello = (name = "taro") => console.log(`Hello ${name}`);
+// //引数が設定されないことを防止したい
+// sayHello();
+// sayHello("Mime");
 
 /**
  * スプレッド構文
  */
 
 //配列の展開
+const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+//順番に出力する
+
+// const sumFunc = (num1,num2) => console.log(num1+num2);
+// sumFunc(arr1[0],arr1[1]);
+// sumFunc(...arr1);
+
+//まとめる
+// const arr2 =[1,2,3,4,5]
+// const [num1,num2,...num3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(num3);
+
+//配列のコピー
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4];
+console.log(arr6);
+arr6[0] = 100;
+console.log(arr6);
+console.log(arr4);
+
+// //配列の結合
+// const arr7 = [...arr4,...arr5];
+// console.log(arr7);
+
+// const arr8 = arr4;
+// console.log(arr8);
+//これでも問題なくコピーできるが
+//arr4を参照しているので
+//arr8を編集した場合arr4も影響を受けてしまう
+
+/**
+ * マップやフィルターを使用した配列の処理
+ */
+
+const nameArr = ["tomy", "May", "Jun"];
+
+// for(let index = 0; index < nameArr.length;index++){
+
+//  console.log(nameArr[index]);
+
+// }
+
+// const nameArr2 = nameArr.map((name) =>{
+//   return name;
+// })
+
+// // console.log(nameArr2);
+
+// nameArr.map((name) => console.log(name));
+
+// const numArry = [1,2,3,4,5];
+// const newNumArr = numArry.filter((num) => {
+//  return num % 2 === 1;
+// });
+
+// console.log(newNumArr);
+
+//何番目かの付帯情報
+// for(let index = 0; index < nameArr.length;index++){
+
+//  console.log(`${index+1}番目は${nameArr[index]}です`);
+
+// }
+
+// nameArr.map((name,index) => console.log(`${index +1}番目は${name}です`));
+
+//配列の値に条件付きで置換
+const newNameArry = nameArr.map((name) => {
+  if (name === "Jun") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArry);
